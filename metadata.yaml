@@ -1,5 +1,5 @@
 homepage: "https://recreativ.com/"
 documentation: "https://github.com/recreativ/gtm-conversion-template"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
+  - sha: 9f15c8dda5421f86c6452ec46a3dc5fa2622f8a4
     changeNotes: Initial release.
