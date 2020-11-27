@@ -108,15 +108,17 @@ function getRCuid()
 
 let RCuid = getRCuid();
 
-if(RCuid)
+if(typeof RCuid === 'string' && RCuid.length > 10)
 {
   setCookie('RCuid', RCuid, {path:'/'});
-} 
+}
 
 if(settings.notTriggeredEvents.indexOf(data.eventType) == -1)
 {
   RCuid = getCookieValues('RCuid') || RCuid;
-  if(RCuid)
+  RCuid = '' + RCuid;
+
+  if(RCuid && RCuid.length > 10)
   {
     const url = settings.getTrackerUrl() + '&rcuid=' + RCuid;
     sendPixel(url);
